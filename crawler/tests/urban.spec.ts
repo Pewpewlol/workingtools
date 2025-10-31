@@ -26,14 +26,23 @@ test('Urban Rechnungen', async ({ page }) => {
   }
   await page.waitForTimeout(5000);
   await page.goto('https://urbansportsclub.com/de/profile/payment-history');
+  // Aktuelles Datum für Dateinamen generieren
+  const now = new Date();
+  const month = String(now.getMonth() + 1).padStart(2, '0'); // +1 weil getMonth() 0-basiert ist
+  const year = now.getFullYear();
+  const dateString = `${month}_${year}`;
+  
   const page1Promise = page.waitForEvent('popup');
   const downloadPromise = page.waitForEvent('download');
   await page.getByRole('link', { name: 'Rechnung herunterladen' }).first().click();
   const page1 = await page1Promise;
   await page1.pause();
   const download = await downloadPromise;
-  download.saveAs('./urbanrechnung/Rechnung2.pdf');
+  
+  // Dateiname mit Datum: z.B. "Rechnung_11_2024.pdf"
+  const fileName = `./urbanrechnung/Rechnung_${dateString}.pdf`;
+  download.saveAs(fileName);
   await wait(3000);
-  FileChecker.doesFileExist('./urbanrechnung/Rechnung2.pdf');
+  FileChecker.doesFileExist(fileName);
 
 });
