@@ -68,10 +68,10 @@ dist
 build/
 
 # Playwright
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+crawler/test-results/
+crawler/playwright-report/
+crawler/blob-report/
+crawler/playwright/.cache/
 
 # TypeScript compiled files
 *.js
