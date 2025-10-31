@@ -4,7 +4,6 @@
   "main": "index.ts",
   "scripts": {
     "rename": "tsc index.ts && node index.js",
-    "mail": "tsc mail.ts && node mail.js"
   },
   "author": "",
   "license": "ISC",

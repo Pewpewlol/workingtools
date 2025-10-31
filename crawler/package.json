@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "urban": "playwright test 'urban*' --headed --project=chromium"
+    "urban": "playwright test 'urban*' --headed --project=chromium",
+    "urban:headless": "playwright test 'urban*' --project=chromium",
+    "urban:local": "dotenv -e .env.local -- npm run urban:headless"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+  "dependencies": {
+    "dotenv-cli": "^7.3.0",
+    "nodemailer": "^6.10.1"
+  },
   "devDependencies": {
     "@playwright/test": "^1.50.1",
-    "@types/node": "^22.13.4"
+    "@types/node": "^22.13.4",
+    "@types/nodemailer": "^6.4.21"
   }
 }

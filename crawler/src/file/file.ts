@@ -2,13 +2,13 @@ import { expect } from '@playwright/test';
 import fs from 'fs';
 
 export class FileChecker {
-    static doesFileExist(file: string) {
-        expect(file, 'File name is required');
+    static doesFileExist(file: string): boolean {
+        expect(file, 'File name is required').toBeTruthy();
         try {
             fs.accessSync(file, fs.constants.F_OK);
-            expect(true).toBeTruthy();
+            return true;
         } catch (err) {
-            expect(false).toBeTruthy();
+            return false;
         }                
     }
     static renameFile(oldFile: string, newFile: string) {

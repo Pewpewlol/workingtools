@@ -1,8 +1,18 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 import { FileChecker } from '../src/file/file';
+import { EmailService } from '../src/email/emailService';
 
 function wait(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Aktuelles Datum für Dateinamen generieren
+function getDateString(): String {
+  const now = new Date();
+  const month = String(now.getMonth() + 1).padStart(2, '0'); // +1 weil getMonth() 0-basiert ist
+  const year = now.getFullYear();
+  const dateString = `${month}_${year}`;
+  return dateString;
 }
 
 test('Urban Rechnungen', async ({ page }) => {
@@ -17,8 +27,12 @@ test('Urban Rechnungen', async ({ page }) => {
 
   await page.getByRole('link', { name: 'Anmelden' }).click();
   await page.waitForTimeout(3000);
-  await page.getByPlaceholder('E-Mail *').fill('sandip.nijjar17@gmail.com');
-  await page.getByRole('textbox', { name: 'Passwort' }).fill('Fischfutter44.');
+  // Login-Daten aus Umgebungsvariablen oder Fallback
+  const loginEmail = process.env.LOGIN_EMAIL || 'sandip.nijjar17@gmail.com';
+  const loginPassword = process.env.LOGIN_PASSWORD || 'Fischfutter44.';
+  
+  await page.getByPlaceholder('E-Mail *').fill(loginEmail);
+  await page.getByRole('textbox', { name: 'Passwort' }).fill(loginPassword);
   
   const anmeldeButton = page.getByRole('button', { name: 'Anmelden' });
   if (await anmeldeButton.isVisible() && await anmeldeButton.isEnabled()) {
@@ -26,11 +40,7 @@ test('Urban Rechnungen', async ({ page }) => {
   }
   await page.waitForTimeout(5000);
   await page.goto('https://urbansportsclub.com/de/profile/payment-history');
-  // Aktuelles Datum für Dateinamen generieren
-  const now = new Date();
-  const month = String(now.getMonth() + 1).padStart(2, '0'); // +1 weil getMonth() 0-basiert ist
-  const year = now.getFullYear();
-  const dateString = `${month}_${year}`;
+  
   
   const page1Promise = page.waitForEvent('popup');
   const downloadPromise = page.waitForEvent('download');
@@ -40,9 +50,24 @@ test('Urban Rechnungen', async ({ page }) => {
   const download = await downloadPromise;
   
   // Dateiname mit Datum: z.B. "Rechnung_11_2024.pdf"
-  const fileName = `./urbanrechnung/Rechnung_${dateString}.pdf`;
-  download.saveAs(fileName);
+  const fileName = `./urbanrechnung/Rechnung_${getDateString()}.pdf`;
+  await download.saveAs(fileName);
   await wait(3000);
-  FileChecker.doesFileExist(fileName);
+  
+  // Prüfen ob Datei erfolgreich heruntergeladen wurde
+  const fileExists = FileChecker.doesFileExist(fileName);
+  console.log(`Rechnung heruntergeladen: ${fileExists}`);
+  
+  // Email senden (nur wenn Datei existiert und Email-Konfiguration vorhanden)
+  if (fileExists && process.env.EMAIL_USER && process.env.RECIPIENT_EMAIL) {
+    const emailService = new EmailService();
+    const recipientEmail = process.env.RECIPIENT_EMAIL;
+    
+    console.log('Sende Rechnung per Email...');
+    const emailSent = await emailService.sendRechnungEmail(fileName, recipientEmail);
+    console.log(`Email gesendet: ${emailSent}`);
+  } else {
+    console.log('Email wird übersprungen - keine Konfiguration oder Datei nicht vorhanden');
+  }
 
 });
