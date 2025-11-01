@@ -14,25 +14,9 @@ export class EmailService {
       }
     });
   }
-  async sendFehlerEmail(errorMessage: string, recipient: string): Promise<boolean> {
+  
+  async sendFehlerEmail(mailOptions: nodemailer.SendMailOptions): Promise<boolean> {
     try {
-      const currentDate = new Date().toLocaleDateString('de-DE');
-
-      const mailOptions = {
-        from: process.env.EMAIL_USER,
-        to: recipient,
-        subject: `Fehler bei Urban Sports Club Rechnung - ${currentDate}`,
-        html: `
-          <h2>Fehler bei der Urban Sports Club Rechnung</h2>
-          <p>Hallo,</p>
-          <p>es gab einen Fehler beim Herunterladen der Urban Sports Club Rechnung:</p>
-          <pre>${errorMessage}</pre>
-          <p>Diese E-Mail wurde automatisch generiert.</p>
-          <br>
-          <p>Viele Grüße</p>
-        `
-      };
-
       const info = await this.transporter.sendMail(mailOptions);
       console.log('Fehler-Email erfolgreich gesendet:', info.messageId);
       return true;
@@ -42,35 +26,22 @@ export class EmailService {
     }
   }
 
-  async sendRechnungEmail(rechnungPath: string, recipient: string): Promise<boolean> {
+  async sendEmail(attachmentPath: string, mailOptions: nodemailer.SendMailOptions): Promise<boolean> {
     try {
       // Prüfen ob die Datei existiert
-      if (!fs.existsSync(rechnungPath)) {
-        console.error(`Rechnung nicht gefunden: ${rechnungPath}`);
+      if (!fs.existsSync(attachmentPath)) {
+        console.error(`Datei nicht gefunden: ${attachmentPath}`);
         return false;
       }
 
-      const fileName = path.basename(rechnungPath);
-      const currentDate = new Date().toLocaleDateString('de-DE');
+      const fileName = path.basename(attachmentPath);
 
-      const mailOptions = {
-        from: process.env.EMAIL_USER,
-        to: recipient,
-        subject: `Urban Sports Club Rechnung - ${currentDate}`,
-        html: `
-          <h2>Urban Sports Club Rechnung</h2>
-          <p>Hallo,</p>
-          <p>anbei hier, die Rechnung:</p>
-          <p><strong>Datei:</strong> ${fileName}</p>
-          <p><strong>Heruntergeladen am:</strong> ${currentDate}</p>
-        `,
-        attachments: [
-          {
-            filename: fileName,
-            path: rechnungPath
-          }
-        ]
-      };
+      mailOptions.attachments = [
+        {
+          filename: fileName,
+          path: attachmentPath
+        }
+      ];
 
       const info = await this.transporter.sendMail(mailOptions);
       console.log('Email erfolgreich gesendet:', info.messageId);

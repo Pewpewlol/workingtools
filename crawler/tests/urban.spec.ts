@@ -1,6 +1,8 @@
 import { test } from '@playwright/test';
 import { FileChecker } from '../src/file/file';
 import { EmailService } from '../src/email/emailService';
+import { urbanErrorMailOptions } from '../src/email/mailOptionsTemplate/urbanRechnungError';
+import { urbanRechnungMailOptions } from '../src/email/mailOptionsTemplate/urbanRechnungTemplate';
 
 /**
  * Hilfsfunktion: Warten für eine bestimmte Zeit in Millisekunden
@@ -34,6 +36,7 @@ function getDateString(): String {
  * - Sendet Fehler-Email bei Problemen
  */
 test('Urban Rechnungen', async ({ page }) => {
+
   const emailService = new EmailService();
   const recipientEmail = process.env.RECIPIENT_EMAIL;
   let currentStep = '';
@@ -144,7 +147,7 @@ test('Urban Rechnungen', async ({ page }) => {
     console.log(`Schritt: ${currentStep}`);
     if (process.env.EMAIL_USER && recipientEmail) {
       console.log('Sende Rechnung per Email...');
-      const emailSent = await emailService.sendRechnungEmail(fileName, recipientEmail);
+      const emailSent = await emailService.sendEmail(fileName, urbanRechnungMailOptions(recipientEmail, fileName, `Rechnung_${getDateString()}.pdf`));
       if (!emailSent) {
         throw new Error('Email konnte nicht gesendet werden');
       }
@@ -164,7 +167,7 @@ test('Urban Rechnungen', async ({ page }) => {
     if (process.env.EMAIL_USER && recipientEmail) {
       console.log('Sende Fehler-Email...');
       try {
-        await emailService.sendFehlerEmail(errorMessage, recipientEmail);
+        await emailService.sendFehlerEmail(urbanErrorMailOptions(errorMessage, recipientEmail));
         console.log('Fehler-Email erfolgreich gesendet');
       } catch (emailError) {
         console.error('Fehler beim Senden der Fehler-Email:', emailError);
