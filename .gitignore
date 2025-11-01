@@ -62,7 +62,6 @@ jspm_packages/
 
 # Build output
 .next
-out
 .nuxt
 dist
 build/

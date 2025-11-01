@@ -1,8 +1,8 @@
 import { test } from '@playwright/test';
-import { FileChecker } from '../src/file/file';
-import { EmailService } from '../src/email/emailService';
-import { urbanErrorMailOptions } from '../src/email/mailOptionsTemplate/urbanRechnungError';
-import { urbanRechnungMailOptions } from '../src/email/mailOptionsTemplate/urbanRechnungTemplate';
+import { FileChecker } from '../src/interfaces/out/file/file';
+import { EmailService } from '../src/interfaces/out/email/emailService';
+import { urbanErrorMailOptions } from '../src/interfaces/out/email/mailOptionsTemplate/urbanRechnungError';
+import { urbanRechnungMailOptions } from '../src/interfaces/out/email/mailOptionsTemplate/urbanRechnungTemplate';
 
 /**
  * Hilfsfunktion: Warten für eine bestimmte Zeit in Millisekunden

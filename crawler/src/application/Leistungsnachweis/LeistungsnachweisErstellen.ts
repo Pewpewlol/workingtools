@@ -1,14 +1,15 @@
-import { callGPT5NanoModel } from "../src/chatgpt/chatgptService";
-import { chatgptErrorMailOptions } from "../src/email/mailOptionsTemplate/chatgptCommitSummaryError";
+
+import { callGPT5NanoModel } from "../../interfaces/out/chatgpt/chatgptService";
+import { chatgptErrorMailOptions } from "../../interfaces/out/email/mailOptionsTemplate/chatgptCommitSummaryError";
 import fs from "fs/promises";
-import { chatgptCommitSummaryMailOptions } from "../src/email/mailOptionsTemplate/chatgptCommitSummaryTemplate";
-import { FileChecker } from "../src/file/file";
-import { EmailService } from "../src/email/emailService";
+import { chatgptCommitSummaryMailOptions } from "../../interfaces/out/email/mailOptionsTemplate/chatgptCommitSummaryTemplate";
+import { FileChecker } from "../../interfaces/out/file/file";
+import { EmailService } from "../../interfaces/out/email/emailService";
 
 /**
  * Pure Node.js ChatGPT Test - komplett ohne Browser/Playwright
  */
-async function runChatGPTTest() {
+export async function LeistungsnachweisErstellen() {
     const emailService = new EmailService();
     
     try {
@@ -85,9 +86,3 @@ async function runChatGPTTest() {
     }
 }
 
-// Test ausführen falls direkt aufgerufen (CommonJS-kompatibel)
-if (require.main === module) {
-    runChatGPTTest();
-}
-
-export { runChatGPTTest };

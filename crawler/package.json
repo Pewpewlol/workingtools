@@ -3,14 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "urban": "playwright test 'urban*' --headed --project=chromium",
+    "urban:headed": "playwright test 'urban*' --headed --project=chromium",
     "urban:headless": "playwright test 'urban*' --project=chromium",
     "urban:local": "dotenv -e .env.local -- npm run urban:headless",
-    "chatgpt:local": "dotenv -e .env.local -- npm run chatgpt:api-only",
-    "chatgpt": "playwright test 'chatgpt*'",
-    "chatgpt:api-only": "playwright test 'chatgpt*' --config=playwright-api.config.ts",
-    "chatgpt:node": "tsx tests/chatgpt-node.spec.ts",
-    "chatgpt:simple": "dotenv -e .env.local -- npm run chatgpt:api-only"
+    "chatgpt:prod": "tsx src/interfaces/in/scripts/Leistungsnachweis/starteLeistungsnachweisErstellen.ts",
+    "chatgpt:local": "dotenv -e .env.local -- npm run chatgpt:prod"
   },
   "keywords": [],
   "author": "",

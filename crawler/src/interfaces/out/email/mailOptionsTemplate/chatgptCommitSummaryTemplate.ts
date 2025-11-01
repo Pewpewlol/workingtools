@@ -7,11 +7,11 @@ export function chatgptCommitSummaryMailOptions(recipient: string, rechnungPath:
     return {
         from: process.env.EMAIL_USER,
         to: recipient,
-        subject: `Urban Sports Club Rechnung - ${currentDate}`,
+        subject: `Leistungsnachweis Summary- ${currentDate}`,
         html: `
-          <h2>Urban Sports Club Rechnung</h2>
+          <h2>Leistungsnachweis Summary</h2>
           <p>Hallo,</p>
-          <p>anbei hier, die Rechnung:</p>
+          <p>anbei hier, der Leristungsnachweis:</p>
           <p><strong>Datei:</strong> ${fileName}</p>
           <p><strong>Heruntergeladen am:</strong> ${currentDate}</p>
         `,
