@@ -8,104 +8,122 @@ npm install
 
 ## 2. Umgebungsvariablen konfigurieren
 
-1. Kopieren Sie die Beispiel-Datei:
-   ```bash
-   cp .env.local.example .env.local
-   ```
-
-2. Bearbeiten Sie `.env.local` und tragen Sie Ihre echten Daten ein:
-   ```bash
-   nano .env.local  # oder Ihr bevorzugter Editor
-   ```
-
-3. **Gmail App-Passwort erstellen:**
-   - Gehen Sie zu https://myaccount.google.com/security
-   - Aktivieren Sie 2-Faktor-Authentifizierung
-   - Gehen Sie zu "App-Passwörter"
-   - Erstellen Sie ein neues App-Passwort für "Mail"
-   - Verwenden Sie dieses Passwort als `EMAIL_PASSWORD`
-
-## 3. Lokale Ausführung
-
-### Kopflos (headless) mit Email-Versendung:
+Erstellen Sie eine `.env.local` Datei im `crawler/` Verzeichnis:
 ```bash
-npm run urban:local
+touch .env.local
 ```
 
-### Mit Browser-Anzeige (für Debugging):
+**Gmail App-Passwort erstellen:**
+- Gehen Sie zu https://myaccount.google.com/security
+- Aktivieren Sie 2-Faktor-Authentifizierung
+- Gehen Sie zu "App-Passwörter"
+- Erstellen Sie ein neues App-Passwort für "Mail"
+- Verwenden Sie dieses 16-stellige Passwort als `EMAIL_PASS`
+
+## 3. Verfügbare Scripts
+
+### Urban Sports Club (Rechnung herunterladen):
 ```bash
-npm run urban
+npm run urban:local      # Kopflos mit Email-Versendung
+npm run urban:headed     # Mit Browser-Anzeige (Debugging)
+npm run urban:headless   # Kopflos ohne Email
 ```
 
-### Nur headless ohne Email:
+### Leistungsnachweis erstellen:
 ```bash
-npm run urban:headless
+npm run leistungsnachweis:local    # Mit lokalen Umgebungsvariablen
+npm run leistungsnachweis:ci       # Ohne dotenv (direkt)
 ```
 
-## 4. Umgebungsvariablen
+### Tests:
+```bash
+npm run ittests:local             # Email-Service Integration Test
+```
 
-Ihre `.env.local` Datei sollte so aussehen:
+## 4. Umgebungsvariablen (.env.local)
+
+Ihre `.env.local` Datei sollte diese Variablen enthalten:
 
 ```env
-# Email-Konfiguration
+# Email-Konfiguration (Gmail)
 EMAIL_USER=ihre-email@gmail.com
-EMAIL_PASSWORD=abcd-efgh-ijkl-mnop  # Gmail App-Passwort
+EMAIL_PASS=abcd-efgh-ijkl-mnop     # Gmail App-Passwort (16 Zeichen)
 RECIPIENT_EMAIL=empfaenger@gmail.com
 
 # Urban Sports Club Login
 LOGIN_EMAIL=ihre-urban-email@gmail.com
 LOGIN_PASSWORD=IhrUrbanPasswort
 
+# ChatGPT/OpenAI API (für Leistungsnachweis)
+OPENAI_API_KEY=sk-...
+
 # Optional
 DEBUG=true
 ```
 
-## 5. Debugging
+**Wichtig:** Verwenden Sie `EMAIL_PASS` (nicht `EMAIL_PASSWORD`) für Gmail!
 
-Falls Probleme auftreten:
+## 5. Testing & Debugging
 
-1. **Email-Verbindung testen:**
-   ```bash
-   node -e "
-   require('dotenv').config({path: '.env.local'});
-   const {EmailService} = require('./src/email/emailService');
-   const service = new EmailService();
-   service.testConnection().then(result => console.log('Test:', result));
-   "
-   ```
-
-2. **Playwright Browser öffnen:**
-   ```bash
-   npm run urban  # Mit --headed Flag
-   ```
-
-3. **Logs prüfen:**
-   - Schauen Sie in die Konsole nach Fehlermeldungen
-   - Prüfen Sie ob alle Umgebungsvariablen gesetzt sind
-
-## 6. Sicherheit
-
-- ⚠️ **Niemals** die `.env.local` Datei in Git committen!
-- Die `.env.local` ist bereits in der `.gitignore` eingetragen
-- Verwenden Sie nur App-Passwörter, nie Ihr echtes Gmail-Passwort
-
-## 7. Troubleshooting
-
-### "nodemailer not found"
+### Email-Service testen:
 ```bash
-npm install nodemailer @types/nodemailer
+npm run ittests:local    # Vollständiger Email-Integration-Test
 ```
 
-### "dotenv-cli not found"
+### Einzelne Services debuggen:
 ```bash
-npm install dotenv-cli
+# Playwright Browser öffnen (Visual Debugging)
+npm run urban:headed
+
+# Leistungsnachweis ohne Email testen
+npm run leistungsnachweis:ci
+
+# Umgebungsvariablen prüfen
+echo $EMAIL_USER    # Sollte Ihre Email anzeigen
 ```
 
-### "Gmail authentication failed"
-- Prüfen Sie Ihr App-Passwort
-- Aktivieren Sie 2-Faktor-Authentifizierung
-- Stellen Sie sicher, dass "Less secure app access" deaktiviert ist
+### Log-Ausgabe interpretieren:
+- ✅ Erfolgreich: Grüne Checkmarks und "erfolgreich" Messages
+- ❌ Fehler: Rote X-Marks mit Fehlerbeschreibung
+- 📧 Email-Status: "Email erfolgreich gesendet" oder Fehler-Details
 
-### "Urban Sports Club login failed"
-- Prüfen Sie Ihre Login-Daten
-- Möglicherweise hat sich die Website-Struktur geändert
+## 6. Projektstruktur (Überblick)
+
+```
+crawler/
+├── .env.local                      # Ihre lokalen Umgebungsvariablen
+├── ressources/monthly_commits.txt  # Input für Leistungsnachweis
+├── commit_summary.txt             # Output von ChatGPT-Analyse
+├── src/
+│   ├── interfaces/in/scripts/Leistungsnachweis/
+│   ├── domain/Aggregates/
+│   └── application/Leistungsnachweis/
+├── tests/
+│   ├── urban.spec.ts              # Urban Sports Automation
+│   └── integrationtest/           # Email-Service Tests
+└── urbanrechnung/                 # Heruntergeladene Rechnungen
+```
+
+## 7. Sicherheit & Best Practices
+
+- ⚠️ **`.env.local` NIEMALS in Git committen!** (ist bereits in .gitignore)
+- Verwenden Sie **nur Gmail App-Passwörter**, nie Ihr echtes Passwort
+- Testen Sie neue Änderungen erst lokal, bevor Sie pushen
+
+## 8. Häufige Probleme & Lösungen
+
+| Problem | Lösung |
+|---------|--------|
+| "Email nicht erhalten" | Gmail App-Passwort prüfen, 2FA aktivieren |
+| "ChatGPT API Fehler" | OpenAI API-Key validieren |
+| "monthly_commits.txt nicht gefunden" | Datei in `ressources/` erstellen |
+| "Dependencies Fehler" | `npm install` erneut ausführen |
+| "Urban Login fehlgeschlagen" | Login-Daten in .env.local prüfen |
+
+## 9. Nächste Schritte
+
+Nach dem lokalen Setup:
+1. **Testen Sie alle Services**: `npm run ittests:local`
+2. **Urban Automation**: `npm run urban:local`
+3. **Leistungsnachweis**: `npm run leistungsnachweis:local`
+4. **GitHub Actions**: Push triggert automatische Ausführung
