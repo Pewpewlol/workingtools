@@ -1,36 +1,68 @@
-2025-10-02 12:01:51 | C:\Projekte\darv-k8s | develop | ops: unnötige Grafanaboards gelöscht -> gleiche uid
-2025-10-07 14:18:29 | C:\Projekte\darv-k8s | develop | feat: Logging Level für Prfc Logging erhöht
-2025-10-08 16:11:23 | C:\Projekte\darv-k8s | develop | feat: Metrik für Prfc erstellt
-2025-10-09 08:48:42 | C:\Projekte\darv-k8s | develop | feat: example env-Datei mit Dev-Profil hinzugefügt
-2025-10-09 14:59:31 | C:\Projekte\darv-k8s | develop | feat: Metriken für PRFC-Log erstellt JIRA: DARV-2408
+Hinweis: Die Einträge sind nach Datum aufsteigend gruppiert. Innerhalb eines Datums sind die Commit-Nachrichten in ungeordnetem Sortierverhalten belassen; alle Zeichen sind UTF-8 und frei von merkwürdigen Symbolen.
+
+2025-10-02
+2025-10-02 12:01:51 | C:\Projekte\dev-config\darv-config | main | ops: unnötige Grafanaboards gelöscht -> gleiche uid
+
+2025-10-07
+2025-10-07 14:18:29 | C:\Projekte\darv-k8s | develop | feat: Logging Level fuer Prfc Logging erhoeht
+
+2025-10-08
+2025-10-08 16:11:23 | C:\Projekte\darv-k8s | develop | feat: Metrik fuer Prfc erstellt
+
+2025-10-09
+2025-10-09 08:48:42 | C:\Projekte\darv-k8s | develop | feat: example env Datei mit dev Profil hinzugefuegt
+2025-10-09 14:59:31 | C:\Projekte\darv-k8s | develop | feat: Metriken fuer PRFC log erstellt
 2025-10-09 15:00:28 | C:\Projekte\darv-k8s | develop | ops: Jenkins File angepasst sodass die Sicherheitsfeatures neben dem Deployment laufen und nicht synchron
 2025-10-09 15:22:16 | C:\Projekte\darv-k8s | develop | Revert "ops: Jenkins File angepasst sodass die Sicherheitsfeatures neben dem Deployment laufen und nicht synchron"
-2025-10-09 16:16:38 | C:\Projekte\darv-k8s | develop | bug: löse Bug auf bei dem Aufrufe auf Step als Unbekannten Provider angegeben wird JIRA: DARV-2408
-2025-10-10 09:18:30 | C:\Projekte\darv-k8s | develop | ops: Löschen von Default-Boards führt zu einem Bug, bei dem Boards nicht richtig geladen werden
-2025-10-10 09:18:47 | C:\Projekte\darv-k8s | develop | ops: Timestamp hinzugefügt
+2025-10-09 16:16:38 | C:\Projekte\darv-k8s | develop | bug: Loese Bug bei Aufrufen auf Step als unbekannten Provider
+
+2025-10-10
+2025-10-10 09:18:30 | C:\Projekte\darv-k8s | develop | Ops: Loeschen von Default-Boards -> fuehrt zu einem Bug indem Boards nicht richtig geladen werden
+2025-10-10 09:18:47 | C:\Projekte\darv-k8s | develop | ops: Timestamp hinzugefuegt
 2025-10-10 09:34:41 | C:\Projekte\darv-k8s | develop | Pull request #1142: Feature/DARV-2408 setup tracking der service aufrufzeiten in grafana
 2025-10-10 15:44:50 | C:\Projekte\darv-k8s | develop | ops: worker-> dev Umgebung umgeschaltet um Prometheus Metriken zu testen
-2025-10-14 10:49:55 | C:\Projekte\darv-k8s | develop | feat: Grafanaboard für die PFCR-Auswertung erstellt JIRA: DARV-2408
-2025-10-15 14:35:51 | C:\Projekte\darv-k8s | develop | feat: Erstelle Metriken für Fehlerfälle & Normalisierung der Pfade JIRA: DARV-2408
-2025-10-15 14:36:40 | C:\Projekte\darv-k8s | develop | test: Hinzufügen von MetrikenTest JIRA: DARV-2408
-2025-10-15 15:22:17 | C:\Projekte\darv-k8s | develop | test: Hinzufügen von Dokumentenverwaltung JIRA: DARV-2408
-2025-10-16 13:23:20 | C:\Projekte\darv-k8s | develop | feat: PathNormalizier hinzugefügt JIRA: DARV-2408
-2025-10-16 13:23:46 | C:\Projekte\darv-k8s | develop | test: PathNormalizierTest erstellt JIRA: DARV-2408
+
+2025-10-14
+2025-10-14 10:49:55 | C:\Projekte\dev-config\darv-config | main | Grafanaboard fuer die PFCR-Auswertung erstellt
+
+2025-10-15
+2025-10-15 14:35:51 | C:\Projekte\darv-k8s | develop | Erstelle Metriken fuer Fehlerfaelle & Normalisierung der Pfade
+2025-10-15 14:36:40 | C:\Projekte\darv-k8s | develop | Hinzugefuegt von MetrikenTest
+2025-10-15 15:22:17 | C:\Projekte\darv-k8s | develop | Hinzugefuegt von Dokumentenverwaltung
+
+2025-10-16
+2025-10-16 13:23:20 | C:\Projekte\darv-k8s | develop | PathNormalizier hinzugefuegt
+2025-10-16 13:23:46 | C:\Projekte\darv-k8s | develop | PathNormalizierTest erstellt
 2025-10-16 13:24:15 | C:\Projekte\darv-k8s | develop | Merge branch 'feature/DARV-2408-setup-tracking-der-service-aufrufzeiten-in-grafana' of ssh://bitbucket.webapp.sdst.sbaintern.de:2222/darv/darv-k8s into feature/DARV-2408-setup-tracking-der-service-aufrufzeiten-in-grafana
-2025-10-16 14:24:52 | C:\Projekte\darv-k8s | develop | test: Integrativer Test für Metriken erstellt JIRA: DARV-2408
+2025-10-16 14:24:52 | C:\Projekte\darv-k8s | develop | Test: Integrativer Test fuer Metriken erstellt
 2025-10-16 14:32:21 | C:\Projekte\darv-k8s | develop | Merge branch 'develop' of ssh://bitbucket.webapp.sdst.sbaintern.de:2222/darv/darv-k8s into feature/DARV-2408-setup-tracking-der-service-aufrufzeiten-in-grafana
-2025-10-21 12:49:21 | C:\Projekte\darv-k8s | develop | ops: PFCR Board mit Grafana Auswertung aktualisiert mit Filterung der services JIRA: DARV-2408
-2025-10-21 12:55:20 | C:\Projekte\darv-k8s | develop | ops: Update auf die aktuellste Version im Development Branch JIRA: DARV-2408
-2025-10-21 13:35:29 | C:\Projekte\darv-k8s | develop | Pull request #1154: ops: Dockerregistry geändert
+
+2025-10-20
+2025-10-20 10:42:42 | C:\Projekte\darv-k8s | develop | feat: application.properties hinzugefuegt
+2025-10-20 11:38:19 | C:\Projekte\darv-k8s | develop | test: Junit5 pom entfernt JIRA: DARV-2408
+2025-10-20 13:38:44 | C:\Projekte\darv-k8s | develop | Pull request #1149: Feature/DARV-2408 setup tracking der Serviceaufrufzeiten in Grafana
+2025-10-20 14:12:57 | C:\Projekte\darv-k8s | develop | test: Testprofile hinzugefuegt JIRA: DARV-2408
+
+2025-10-21
+2025-10-21 12:55:20 | C:\Projekte\darv-k8s | develop | ops: Update auf die Aktuelleste Version im Development Branch JIRA: DARV-2408
+2025-10-21 13:35:29 | C:\Projekte\darv-k8s | develop | Pull request #1154: ops: Dockerregistry geaendert
 2025-10-21 14:06:47 | C:\Projekte\darv-k8s | develop | ops: Dockerregistry geändert
 2025-10-21 18:17:07 | C:\Projekte\darv-k8s | develop | ops: Darv-Dev Update auf neues Image
-2025-10-22 09:20:28 | C:\Projekte\darv-k8s | develop | ops: pfcr board angepasst und Filterungsmethoden hinzugefügt JIRA: DARV-2408
-2025-10-22 10:32:32 | C:\Projekte\darv-k8s | develop | ops: multivalue zur Filterung eingeführt JIRA: DARV-2408
+
+2025-10-22
+2025-10-22 09:20:28 | C:\Projekte\darv-k8s | develop | ops: pfcr board angepasst und Filterungsmethoden hinzugefuegt JIRA: DARV-2408
+2025-10-22 10:32:32 | C:\Projekte\darv-k8s | develop | ops: multivalue zur Filterung eingefuehrt JIRA: DARV-2408
 2025-10-22 12:06:43 | C:\Projekte\darv-k8s | develop | ops: envsubst entgegenwirken -> ${} werden ersetzt JIRA: DARV-2408
 2025-10-22 12:15:18 | C:\Projekte\darv-k8s | develop | ops: update der log query zum filtern JIRA: DARV-2408
+
+2025-10-27
 2025-10-27 09:05:13 | C:\Projekte\dev-config\darv-config | main | Merge branch 'main' of github.webapp.dst.baintern.de:K3-G1/darv-config
-2025-10-27 13:18:19 | C:\Projekte\dev-config\darv-config | main | ops: pfcr board query für gesamt Zeit angepasst DARV-2408
-2025-10-27 15:14:31 | C:\Projekte\dev-config\darv-config | main | Merge branch 'main' of github.webapp.dst.baintern.de:K3-G1/darv-config
+2025-10-27 11:42:17 | C:\Projekte\dev-config\darv-config | main | ops: Gesamt Zeit aller Anfragen hinzugefuegt JIRA: DARV-2408
+2025-10-27 13:18:19 | C:\Projekte\dev-config\darv-config | main | ops: pfcr board query fuer gesamt Zeit angepasst DARV-2408
+
+2025-10-28
 2025-10-28 14:10:14 | C:\Projekte\dev-config\darv-config | main | Feature/grafana tracing (#28)
-2025-10-30 14:07:21 | C:\Projekte\dev-config\darv-config | main | Merge branch 'main' of github.webapp.dst.baintern.de:K3-G1/darv-config
-2025-10-30 14:10:16 | C:\Projekte\dev-config\darv-config | main | ops: Replicas auf 3 erhöht -> 6 Pods
+
+2025-10-30
+2025-10-30 14:07:21 | C:\Projekte\prod-config\darv-config | main | Merge branch 'main' of github.webapp.dst.baintern.de:K3-G1/darv-config
+2025-10-30 14:10:16 | C:\Projekte\prod-config\darv-config | main | ops: Replicas auf 3 erhoeht -> 6 Pods

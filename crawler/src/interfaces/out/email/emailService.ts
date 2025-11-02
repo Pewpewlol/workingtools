@@ -4,13 +4,28 @@ import * as path from 'path';
 
 export class EmailService {
   private transporter: nodemailer.Transporter;
+  private emailUser: string = '';
+  private emailPassword: string = '';
 
-  constructor() {
+  constructor(emailUser?: string, emailPassword?: string) {
+    // Email-Konfiguration setzen
+    this.emailUser = emailUser || process.env.EMAIL_USER || '';
+    this.emailPassword = emailPassword || process.env.EMAIL_PASS || process.env.EMAIL_PASSWORD || '';
+    
+    if (!this.emailUser || this.emailUser === '') {
+      throw new Error("❌ EMAIL_USER ist nicht gesetzt");
+    }
+    if (!this.emailPassword || this.emailPassword === '') {
+      throw new Error("❌ EMAIL_PASS/EMAIL_PASSWORD ist nicht gesetzt");
+    }
+
+    console.log(`📧 Email-Service initialisiert.`);
+    
     this.transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD
+        user: this.emailUser,
+        pass: this.emailPassword
       }
     });
   }

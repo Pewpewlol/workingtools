@@ -1,0 +1,38 @@
+# name: Supabase Kurz Reaktivieren
+
+# on:
+#   # Läuft jeden 15. des Monats um 9:00 UTC (11:00 CET)
+#   schedule:
+#     - cron: '0 9 * * *'
+#   # Manueller Trigger für Tests
+#   workflow_dispatch:
+# jobs:
+#   supabase-reactivieren:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - name: Checkout Repository
+#       uses: actions/checkout@v4
+
+#     - name: Setup Node.js
+#       uses: actions/setup-node@v4
+#       with:
+#         node-version: '18'
+#         cache: 'npm'
+#         cache-dependency-path: 'crawler/package-lock.json'
+
+#     - name: Navigate to crawler directory
+#       run: cd crawler
+
+#     - name: Install Dependencies
+#       run: |
+#         cd crawler
+#         npm install
+
+#     - name: Run Supabase Reactivieren Script
+#       env:
+#         SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+#         SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+#       run: |
+#         cd crawler
+#         npm run supabase:reactivieren

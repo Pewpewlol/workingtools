@@ -1,0 +1,24 @@
+name: Leistungsnachweis Erstellen
+on:
+  push:
+    paths:
+        - 'crawler/ressources/montly_commits.txt'
+  # Manueller Trigger für Tests
+  workflow_dispatch:
+jobs:
+  leistungsnachweis-erstellen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+    
+      - name: Generate Leistungsnachweis
+        run: npm run leistungsnachweis:ci

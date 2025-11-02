@@ -6,8 +6,9 @@
     "urban:headed": "playwright test 'urban*' --headed --project=chromium",
     "urban:headless": "playwright test 'urban*' --project=chromium",
     "urban:local": "dotenv -e .env.local -- npm run urban:headless",
-    "chatgpt:prod": "tsx src/interfaces/in/scripts/Leistungsnachweis/starteLeistungsnachweisErstellen.ts",
-    "chatgpt:local": "dotenv -e .env.local -- npm run chatgpt:prod"
+    "leistungsnachweis:ci": "tsx src/interfaces/in/scripts/Leistungsnachweis/starteLeistungsnachweisErstellen.ts",
+    "leistungsnachweis:local": "dotenv -e .env.local -- npm run leistungsnachweis:ci",
+    "ittests:local": "dotenv -e .env.local -- tsx tests/integrationtest/emailServicetest.spec.ts"
   },
   "keywords": [],
   "author": "",
