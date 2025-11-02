@@ -72,4 +72,3 @@ Branch: main
  
 Report gespeichert unter: C:\Users\nijjars001\monthly_commits.txt
  
-Test
