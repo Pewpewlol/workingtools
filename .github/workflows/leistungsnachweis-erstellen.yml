@@ -1,24 +1,48 @@
 name: Leistungsnachweis Erstellen
+
 on:
   push:
     paths:
-        - 'crawler/ressources/montly_commits.txt'
+      - 'crawler/ressources/monthly_commits.txt'
+    branches:
+      - main
   # Manueller Trigger für Tests
   workflow_dispatch:
+
 jobs:
   leistungsnachweis-erstellen:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: crawler
+    
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '23'
+          cache: 'npm'
+          cache-dependency-path: crawler/package.json
 
       - name: Install Dependencies
         run: npm install
-    
+
       - name: Generate Leistungsnachweis
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
         run: npm run leistungsnachweis:ci
+
+      - name: Upload Generated Files
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: leistungsnachweis-output
+          path: |
+            crawler/commit_summary.txt
+            crawler/*.pdf
