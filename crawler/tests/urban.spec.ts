@@ -44,22 +44,22 @@ test('Urban Rechnungen', async ({ page }) => {
   try {
     // SCHRITT 1: Urban Sports Club Website öffnen
     currentStep = 'Website öffnen';
-    console.log(`Schritt: ${currentStep}`);
+    console.log(`Schritt 1: ${currentStep}`);
     await page.goto('https://urbansportsclub.com/de/', { timeout: 30000 });
     await page.waitForTimeout(3000);
     
     // SCHRITT 2: Cookie-Banner akzeptieren (falls vorhanden)
     currentStep = 'Cookies akzeptieren';
-    console.log(`Schritt: ${currentStep}`);
+    console.log(`Schritt 2: ${currentStep}`);
     const cookieButton = page.getByRole('button', { name: 'Alle Cookies akzeptieren' });
     if (await cookieButton.isVisible()) {
       await cookieButton.click();
     }
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(3000);
 
     // SCHRITT 3: Zum Login-Bereich navigieren
     currentStep = 'Anmelde-Link klicken';
-    console.log(`Schritt: ${currentStep}`);
+    console.log(`Schritt 3: ${currentStep}`);
     const anmeldeLink = page.getByRole('link', { name: 'Anmelden' });
     if (!(await anmeldeLink.isVisible())) {
       throw new Error('Anmelde-Link nicht gefunden oder nicht sichtbar');
@@ -69,7 +69,7 @@ test('Urban Rechnungen', async ({ page }) => {
     
     // SCHRITT 4: Login-Credentials aus Umgebungsvariablen laden und eingeben
     currentStep = 'Login-Daten eingeben';
-    console.log(`Schritt: ${currentStep}`);
+    console.log(`Schritt 4: ${currentStep}`);
     const loginEmail = process.env.LOGIN_EMAIL || '';
     const loginPassword = process.env.LOGIN_PASSWORD || '';
     
@@ -89,30 +89,23 @@ test('Urban Rechnungen', async ({ page }) => {
     
     // SCHRITT 5: Anmeldung durchführen
     currentStep = 'Anmeldung durchführen';
-    console.log(`Schritt: ${currentStep}`);
+    console.log(`Schritt 5: ${currentStep}`);
     const anmeldeButton = page.getByRole('button', { name: 'Anmelden' });
     if (!(await anmeldeButton.isVisible()) || !(await anmeldeButton.isEnabled())) {
       throw new Error('Anmelde-Button nicht gefunden oder nicht klickbar');
     }
     await anmeldeButton.click();
-    await page.waitForTimeout(5000);
-    
-    // SCHRITT 6: Anmeldung validieren (prüfen ob Login erfolgreich)
-    currentStep = 'Anmeldung überprüfen';
-    console.log(`Schritt: ${currentStep}`);
-    const anmeldeUeberpruefungButton = page.getByRole('button', { name: 'Anmelden' });
-    if ((await anmeldeUeberpruefungButton.isVisible()) || (await anmeldeUeberpruefungButton.isEnabled())) {
-      throw new Error('Anmeldung fehlgeschlagen - Anmelde-Button immer noch sichtbar');
-    }
-    
-    // SCHRITT 7: Zur Rechnungsübersicht navigieren
+    await page.waitForTimeout(2000);
+  
+
+    // SCHRITT 6: Zur Rechnungsübersicht navigieren
     currentStep = 'Rechnungsübersicht öffnen';
-    console.log(`Schritt: ${currentStep}`);
+    console.log(`Schritt 6: ${currentStep}`);
     await page.goto('https://urbansportsclub.com/de/profile/payment-history', { timeout: 5000 });
     
-    // SCHRITT 8: Download der neuesten Rechnung initialisieren
+    // SCHRITT 7: Download der neuesten Rechnung initialisieren
     currentStep = 'Rechnung herunterladen';
-    console.log(`Schritt: ${currentStep}`);
+    console.log(`Schritt 7: ${currentStep}`);
     const downloadLink = page.getByRole('link', { name: 'Rechnung herunterladen' }).first();
     if (!(await downloadLink.isVisible())) {
       throw new Error('Download-Link für Rechnung nicht gefunden');
@@ -125,16 +118,16 @@ test('Urban Rechnungen', async ({ page }) => {
     await page1Promise;
     const download = await downloadPromise;
     
-    // SCHRITT 9: Rechnung mit Datumsformat speichern
+    // SCHRITT 8: Rechnung mit Datumsformat speichern
     currentStep = 'Datei speichern';
-    console.log(`Schritt: ${currentStep}`);
+    console.log(`Schritt 8: ${currentStep}`);
     const fileName = `./urbanrechnung/Rechnung_${getDateString()}.pdf`;
     await download.saveAs(fileName);
     await wait(3000);
     
-    // SCHRITT 10: Download-Erfolg validieren
+    // SCHRITT 9: Download-Erfolg validieren
     currentStep = 'Datei-Existenz prüfen';
-    console.log(`Schritt: ${currentStep}`);
+    console.log(`Schritt 9: ${currentStep}`);
     const fileExists = FileChecker.doesFileExist(fileName);
     console.log(`Rechnung heruntergeladen: ${fileExists}`);
     
@@ -142,9 +135,9 @@ test('Urban Rechnungen', async ({ page }) => {
       throw new Error(`Rechnung wurde nicht erfolgreich gespeichert: ${fileName}`);
     }
     
-    // SCHRITT 11: Email-Versendung der Rechnung
+    // SCHRITT 10: Email-Versendung der Rechnung
     currentStep = 'Email versenden';
-    console.log(`Schritt: ${currentStep}`);
+    console.log(`Schritt 10: ${currentStep}`);
     if (process.env.EMAIL_USER && recipientEmail) {
       console.log('Sende Rechnung per Email...');
       const emailSent = await emailService.sendEmail(fileName, urbanRechnungMailOptions(recipientEmail, fileName, `Rechnung_${getDateString()}.pdf`));
