@@ -52,6 +52,9 @@ if (require.main === module) {
 
     ist erlaubt!
 
+    Ich brauche jeden Wochentag (Mo-Fr) im Monat abgedeckt.
+    Auch wenn nichts drinnen steht für den Tag, bitte erfinde etwas sinnvolles, das zwischen den Tagen passieren hätte können wie Debugging Session oder fehlerbehebung.
+
     `;
 
     const filePath = "./ressources/monthly_commits.txt";
