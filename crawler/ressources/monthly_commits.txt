@@ -1,74 +1,401 @@
-Git Commit Report - 2025-10-31 22:53:03
+Commit-Ãœbersicht von Nijjar Sandip am 2025-10-31 22:34:03
+----------------------------------------
+Git Commit Report - 2025-11-28 12:25:20
 Autor: Nijjar Sandip
 Branches: develop oder main
-Zeitraum: ab 2025-10-01
+Zeitraum: ab 2025-11-01
 =============================================================
- 
+
 Repository: C:\Projekte\darv-k8s
 ---------------------------------------------
 Branch: develop
-2025-10-21 13:35:29 | Pull request #1154: ops: Dockerregistry ge├ñndert
-2025-10-21 14:06:47 | ops: Dockerregistry ge├ñndert
-2025-10-20 13:38:44 | Pull request #1149: Feature/DARV-2408 setup tracking der service aufrufzeiten in grafana
-2025-10-20 14:12:57 | test: Testprofile hinzugef├╝gt  JIRA: DARV-2408
-2025-10-20 11:38:19 | test: Junit5 pom entfernt JIRA: DARV-2408
-2025-10-20 10:42:42 | feat: application.properties hinzugef├╝gt JIRA: DARV-2408
-2025-10-16 14:32:21 | Merge branch 'develop' of ssh://bitbucket.webapp.sdst.sbaintern.de:2222/darv/darv-k8s into feature/DARV-2408-setup-tracking-der-service-aufrufzeiten-in-grafana
-2025-10-16 14:24:52 | test: Integrativer Test f├╝r Metriken erstellt JIRA: DARV-2408
-2025-10-16 13:24:15 | Merge branch 'feature/DARV-2408-setup-tracking-der-service-aufrufzeiten-in-grafana' of ssh://bitbucket.webapp.sdst.sbaintern.de:2222/darv/darv-k8s into feature/DARV-2408-setup-tracking-der-service-aufrufzeiten-in-grafana
-2025-10-16 13:23:46 | test: PathNormalizierTest erstellt JIRA: DARV-2408
-2025-10-16 13:23:20 | feat: PathNormalizier hinzuf├╝gt JIRA: DARV-2408
-2025-10-15 15:22:17 | test: Hinzuf├╝gen von Dokumentenverwaltung JIRA: DARV-2408
-2025-10-15 14:36:40 | test: Hinzuf├╝gen von MetrikenTest JIRA: DARV-2408
-2025-10-15 14:35:51 | feat: Erstelle Metriken f├╝r Fehlerf├ñlle & normalisierung der Pfade JIRA: DARV-2408
-2025-10-10 09:34:41 | Pull request #1142: Feature/DARV-2408 setup tracking der service aufrufzeiten in grafana
-2025-10-09 16:16:38 | bug: l├Âse Bug auf bei dem Aufrufe auf Step als Unbekannten Provider angegeben wird JIRA: DARV-2408
-2025-10-09 15:22:16 | Revert "ops: Jenkins File angepasst sodass die Sicherheitsfeatures neben dem deployment laufen und nicht synchron"
-2025-10-09 15:00:28 | ops: Jenkins File angepasst sodass die Sicherheitsfeatures neben dem deployment laufen und nicht synchron
-2025-10-09 14:59:31 | feat: Metriken f├╝r PRFC log erstellt JIRA: DARV-2408
-2025-10-09 08:48:42 | feat: example env Datei mit dev Profil hinzugef├╝gt JIRA: DARV-2408
-2025-10-08 16:11:23 | feat: Metric f├╝r f├╝r Prfc erstellt JIRA: DARV-2408
-2025-10-07 14:18:29 | feat: Logging Level f├╝r Prfc Logging erh├Âht JIRA: DARV-2408
- 
+2025-11-07 05:18:10 | Pull request #1172: bugfix: 3.28.0 Konfigurations Update JIRA: DARV-2495
+2025-11-06 16:58:30 | bugfix: 3.28.0 Konfigurations Update JIRA: DARV-2495
+2025-11-06 09:02:34 | Pull request #1170: config: Oracle Treiber hinzugef├╝gt JIRA: DARV-2495
+2025-11-05 15:33:02 | feat: lokale Entwicklung erm├Âglichen JIRA: DARV-2495
+2025-11-05 13:04:17 | config: Oracle Treiber hinzugef├╝gt JIRA: DARV-2495
+
 Repository: C:\Projekte\darv-k8s-test
 ---------------------------------------------
-Keine Commits in diesem Monat auf Branch develop.
- 
+Branch: develop
+2025-11-25 10:05:48 | test: Test Projekt f├╝r Linux & Kubernetes umgestellt, Chromeoptionen angepasst JIRA: DARV-2478
+
 Repository: C:\Projekte\darv-k8s-testdatengenerator
 ---------------------------------------------
 Keine Commits in diesem Monat auf Branch develop.
- 
+
+Repository: C:\Projekte\darv-regressionstest
+---------------------------------------------
+Branch: develop
+2025-11-24 13:25:59 | feat: node und npm entfernt JIRA: DARV-2478
+2025-11-24 11:57:54 | feat: registry ge├ñndert JIRA: DARV-2478
+2025-11-24 11:30:28 | feat: Chromium & chromdriver werden aus Repo gezogen JIRA: DARV-2478
+2025-11-20 16:45:06 | feat: regtest ordner ausw├ñhlen um Report zu senden JIRA: DARV-2478
+2025-11-20 16:01:47 | feat: chrome treiber wird sp├ñter in temp ordner ge├╝hrt JIRA: DARV-2478
+2025-11-20 15:14:53 | feat: Versionierung den Java Projekten angleichen, um Konflikte zu vermeiden JIRA: DARV-2478
+2025-11-20 11:22:53 | feat: richtigen s3 endpoint mit serviceentry ge├ñndert JIRA: DARV-2478
+2025-11-20 08:58:20 | feat: regtest project wegen readonly Rechten wird in /app zwischen gespeichert JIRA: DARV-2478
+2025-11-17 11:43:22 | feat: Testreport ausf├╝hrung in launch.sh JIRA: DARV-2478
+2025-11-17 11:42:37 | feat: Datumsformat ge├ñndert JIRA: DARV-2478
+2025-11-17 11:34:51 | feat: Testreport Upload hinzugef├╝gt JIRA: DARV-2478
+2025-11-17 11:31:36 | feat: mavne build wird nciht ben├Âtigt: DARV-2478
+2025-11-13 13:09:04 | ops: f├╝ge Chrometreiber hinzu JIRA: DARV-2478
+2025-11-12 17:37:54 | ops: entferne version and tag JIRA: DARV-2478
+2025-11-12 17:28:43 | ops: Jenkinsfile f├╝r das Cucumber Docker Image hinzugef├╝gt JIRA: DARV-2478
+2025-11-12 17:17:55 | feat: launch.sh f├╝hrt regtest aus JIRA: DARV-2478
+2025-11-12 17:17:20 | ref: refactoren von Klassen JIRA: DARV-2478
+2025-11-12 17:15:59 | add: f├╝ge Dockerfile eine Copy von regtest projekt hinzu JIRA: DARV-2478
+2025-11-12 14:13:57 | feat: Lade Cucumberproperties aus dem S3 Bucket JIRA: DARV-2478
+2025-11-11 16:15:42 | ops: dockerfile angepasst sodass darv-projekt und darv-cucumber richtig installiert wird. JIRA: DARV-2478
+2025-11-07 16:30:15 | Initialer Aufbau JIRA: DARV-2478
+
 Repository: C:\Projekte\oiambk-fapi-benutzerkonto
 ---------------------------------------------
 Keine Commits in diesem Monat auf Branch main.
- 
+
+Repository: C:\Projekte\tp-rancher
+---------------------------------------------
+Branch: main
+2025-11-28 10:19:58 | ops: Location Regressionstest angepasst JIRA: DARV-2478
+2025-11-25 11:29:49 | ops: update kustomization
+2025-11-25 10:55:54 | ops: f├╝ge intranet login serviceentry hinzu JIRA: DARV-2478
+2025-11-19 16:33:18 | ops: kustomization f├╝r nexus serviceentry hinzugef├╝gt JIRA: DARV-2478
+2025-11-19 16:31:21 | ops: nexus f├╝r regressiontest hinzugef├╝gt JIRA: DARV-2478
+2025-11-19 15:53:28 | ops: kustomization yaml angepasst f├╝r bitbucket host JIRA: DARV-2478
+2025-11-19 15:31:26 | ops: bitbucket serviceentry JIRA: DARV-2478
+2025-11-18 12:04:56 | typo: filenamege├ñndert JIRA: DARV-2478
+2025-11-17 13:39:38 | ops: Regressionstest Kustomization Konfiguration hinzugef├╝gt JIRA: DARV-2478
+
 Repository: C:\Projekte\dev-config\darv-config
 ---------------------------------------------
 Branch: main
-2025-10-28 13:11:57 | ops: farbliche Untescheidung f├╝r die gesamt Dauer der Anfragen hinzugef├╝gt JIRA: DARV-2408
-2025-10-27 15:14:31 | ops: PFCR Auswertung mit increase Query statt Rate
-2025-10-27 13:18:19 | ops: pfcr board query f├╝r gesamt Zeit angepasst DARV-2408
-2025-10-27 11:42:17 | ops: Gesamt Zeit aller Anfragen hinzugef├╝gt JIRA: DARV-2408
-2025-10-22 12:15:18 | ops: update der log query zum filtern JIRA: DARV-2408
-2025-10-22 12:06:43 | ops: envsubst entgegenwirken -> ${} werden ersetzte JIRA: DARV-2408
-2025-10-22 10:32:32 | ops: multivalue zur Filterung eingef├╝hrt JIRA: DARV-2408
-2025-10-22 09:20:28 | ops: pfcr board angepasst und Filterungsmethoden hinzugef├╝gt JIRA: DARV-2408
-2025-10-21 18:17:07 | ops: Darv-Dev Update auf neues Image
-2025-10-21 12:55:20 | ops: Update auf die Aktuelleste Version im Development Branch JIRA: DARV-2408
-2025-10-21 12:49:21 | ops: PFCR Board mit Grafana Auswertung aktualisiert mit Filterung der services JIRA: DARV-2408
-2025-10-14 10:49:55 | feat: Grafanaboard f├╝r die PFCR-Auswertung erstellt JIRA: DARV-2408
-2025-10-10 15:44:50 | ops: worker-> dev Umgebung umgeschaltet um Prometheus Metriken zu testen
-2025-10-10 09:18:47 | ops: Timestamp hinzugef├╝gt
-2025-10-10 09:18:30 | ops: L├Âschen von default boards -> f├╝hrt zu einem Bug indem Boards nicht richtig geladen werden
-2025-10-02 12:01:51 | ops: unn├Âtige Grafanaboards gel├Âscht -> gleiche uid
- 
+2025-11-28 10:48:04 | ops: base Ordner korrigiert JIRA: DARV-2478
+2025-11-28 10:26:21 | Merge branch 'main' of github.webapp.idst.ibaintern.de:K3-G1/darv-config
+2025-11-28 10:25:11 | ops: cronjob f├╝r vfz1 und vfz2 eingestellt JIRA: DARV-2478
+2025-11-27 15:39:25 | ops: starte cronjob um 22 Uhr JIRA: DARV-2478
+2025-11-27 14:42:34 | update regtest image JIRA: DARV-2478
+2025-11-25 10:15:54 | ops: update des regtest containers
+2025-11-24 11:41:40 | ops: regtest update JIRA: DARV-2478
+2025-11-20 16:35:19 | ops: fuege env variablen f├╝r Datenbank hinzu JIRA: DARV-2479
+2025-11-20 15:46:00 | ops: update regtest JIRA: DARV-2478
+2025-11-20 09:16:20 | ops: neue version f├╝r regressionstest JIRA: DARV-2478
+2025-11-19 16:05:44 | ops: Sidecar Konfiguration hinzugef├╝gt JIRA: DARV-2478
+2025-11-19 14:03:44 | ops: tmp Ordner in den cronjob hinzugef├╝gt JIRA: DARV-2478
+2025-11-19 13:42:09 | ops: cronjob image secret hinzugef├╝gt JIRA: DARV-2478
+2025-11-19 11:13:46 | ops: cronjob Zeitzone angepasst JIRA: DARV-2478
+2025-11-19 10:39:34 | ops: serviceaccountnamen hinzugef├╝gt JIRA: DARV-2478
+2025-11-18 13:18:55 | ops: Annotations hinzugef├╝gt JIRA: DARV-2478
+2025-11-18 09:25:41 | ops: image namen ge├ñndert JIRA: DARV 2478
+2025-11-17 14:44:32 | ops: neustart vom cronjob wird verhindert JIRA: DARV-2478
+2025-11-17 12:37:30 | ops: f├╝ge regressionstest Cronjob hinzu JIRA: DARV-2478
+2025-11-06 17:16:46 | bugfix: CORS Konfigurationstest in der DEV JIRA: 2495
+2025-11-06 14:57:50 | deploy: Dev Umgebung auf den Development Branch bringen JIRA: DARV-2495
+
 Repository: C:\Projekte\prod-config\darv-config
 ---------------------------------------------
-Branch: main
-2025-10-30 14:10:16 | ops: Replicas auf 3 erh├Âht -> 6 Pods
-2025-10-30 14:07:21 | Merge branch 'main' of github.webapp.dst.baintern.de:K3-G1/darv-config
-2025-10-28 14:10:14 | Feature/grafana tracing (#28)
-2025-10-27 09:05:13 | Merge branch 'main' of github.webapp.dst.baintern.de:K3-G1/darv-config
- 
+Keine Commits in diesem Monat auf Branch main.
+
 Report gespeichert unter: C:\Users\nijjars001\monthly_commits.txt
- 
+
+
+Leistungsnachweis (Aktivitaetsstrom)
+Zeitraum: letzte 30 Tage
+=============================================================
+
+Datum: 2025-11-28 10:48
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: base Ordner korrigiert JIRA: DARV-2478 K3-G1/darv-config main 031e70a9735ceeda169808047efbcae96a86ab29 GitHub Enterprise Server - Â±1 - regressionstest/test/vfz1 /kustomization.yaml GitHub Enterprise Server - Â±1 - regressionstest/test/vfz2 /kustomization.yaml GitHub Enterprise Server - Â±2 -
+
+------------------------------------------------------------
+
+Datum: 2025-11-28 10:25
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: cronjob fÃ¼r vfz1 und vfz2 eingestellt JIRA: DARV-2478 K3-G1/darv-config main 4fe0cad965163ef6c1e69be4c95432d644e7495d GitHub Enterprise Server +2 - - regressionstest/base /cronjob.yaml GitHub Enterprise Server GelÃ¶scht -9 regressionstest/test /kustomization.yaml GitHub Enterprise Server +9 HinzugefÃ¼gt regressionstest/test/vfz1 /kustomization.yaml GitHub Enterprise Server +18 HinzugefÃ¼gt regressionstest/test/vfz2 /kustomization.yaml GitHub Enterprise Server +29 - -9
+
+------------------------------------------------------------
+
+Datum: 2025-11-28 10:19
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: Location Regressionstest angepasst JIRA: DARV-2478 K3-G1/tp-rancher main 61e09a26de0f1e66a07ae42de3d4ea3a955d886d GitHub Enterprise Server - Â±1 - subdomains/darv/test/darv /regressionstest.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-27 16:08
+TÃ¤tigkeit: Nijjar Sandip - extern kommentierte DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+
+------------------------------------------------------------
+
+Datum: 2025-11-27 16:07
+TÃ¤tigkeit: Nijjar Sandip - extern fÃ¼gte eine Datei zu DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests hinzu
+
+------------------------------------------------------------
+
+Datum: 2025-11-27 15:39
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: starte cronjob um 22 Uhr JIRA: DARV-2478 K3-G1/darv-config main 441c6e1983bf6fa2ee8b5205bbaa07057ac4bf91 GitHub Enterprise Server - Â±1 - regressionstest/base /cronjob.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-27 14:42
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: update regtest image JIRA: DARV-2478 K3-G1/darv-config main 738bbf418615000e9dee494c2edec3cc0c1af8bc GitHub Enterprise Server - Â±1 - regressionstest/test /kustomization.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-25 10:55
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: fÃ¼ge intranet login serviceentry hinzu JIRA: DARV-2478 K3-G1/tp-rancher main 4f4b44d054ca23e10863372fd530f799e74ba996 GitHub Enterprise Server +16 HinzugefÃ¼gt subdomains/darv/test/istio /login.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-24 13:35
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: regtest update JIRA: DARV-2478 K3-G1/darv-config main 90bc7294dba2d6e0d5d183c9d69ea929de206218 GitHub Enterprise Server - Â±1 - regressionstest/test /kustomization.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-20 16:48
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2479 - [PROD] S3 Transfer Verzeichnisse mit falschem Suffix
+Details: ops: fuege env variablen fÃ¼r Datenbank hinzu JIRA: DARV-2479 K3-G1/darv-config main cc0d84189ec788c08e9eb6ea3df4b08ee4ac7564 GitHub Enterprise Server +16 Â±1 - regressionstest/base /cronjob.yaml GitHub Enterprise Server - Â±1 - regressionstest/test /kustomization.yaml GitHub Enterprise Server +16 Â±2 -
+
+------------------------------------------------------------
+
+Datum: 2025-11-20 16:08
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: update regtest JIRA: DARV-2478 K3-G1/darv-config main 68766279862f61316766a7c56d475bd54cf84630 GitHub Enterprise Server - Â±1 - regressionstest/test /kustomization.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-20 11:36
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: neue version fÃ¼r regressionstest JIRA: DARV-2478 K3-G1/darv-config main 61eef4a27241cd6d8640debf1a52c5538e27d0f1 GitHub Enterprise Server - Â±1 - regressionstest/test /kustomization.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-19 16:33
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: kustomization fÃ¼r nexus serviceentry hinzugefÃ¼gt JIRA: DARV-2478 K3-G1/tp-rancher main 09c3bdfe6a02dc6092c8cf91f60dfb2d4efd4aea GitHub Enterprise Server +1 - - subdomains/darv/test/istio /kustomization.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-19 16:31
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: nexus fÃ¼r regressiontest hinzugefÃ¼gt JIRA: DARV-2478 K3-G1/tp-rancher main 91c5ea09f858cc7b97fbed383a86aa27b16f77b7 GitHub Enterprise Server +15 HinzugefÃ¼gt subdomains/darv/test/istio /nexus.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-19 16:05
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: Sidecar Konfiguration hinzugefÃ¼gt JIRA: DARV-2478 K3-G1/darv-config main c5fef99b4919fd2b7c7cc55332e906ba27a53f8c GitHub Enterprise Server +13 - - regressionstest/base /cronjob.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-19 15:53
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: kustomization yaml angepasst fÃ¼r bitbucket host JIRA: DARV-2478 K3-G1/tp-rancher main 62d56fc7f85705fa48f7309d0ef6a359d8b41114 GitHub Enterprise Server - Â±1 - subdomains/darv/test/istio /bitbucket.yaml GitHub Enterprise Server +1 - - subdomains/darv/test/istio /kustomization.yaml GitHub Enterprise Server +1 Â±1 -
+
+------------------------------------------------------------
+
+Datum: 2025-11-19 15:41
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: tmp Ordner in den cronjob hinzugefÃ¼gt JIRA: DARV-2478 K3-G1/darv-config main d51f627b500c4b79beff471c0b4dfe9084b322e2 GitHub Enterprise Server +8 Â±4 - regressionstest/base /cronjob.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-19 15:31
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: bitbucket serviceentry JIRA: DARV-2478 K3-G1/tp-rancher main 1bdc3ae2f5c24b59a76f49c1a9df2d45ece646e0 GitHub Enterprise Server GelÃ¶scht -30 subdomains/darv/test/darv /regresionstest.yaml GitHub Enterprise Server +15 HinzugefÃ¼gt subdomains/darv/test/istio /bitbucket.yaml GitHub Enterprise Server +15 - -30
+
+------------------------------------------------------------
+
+Datum: 2025-11-19 13:47
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: cronjob image secret hinzugefÃ¼gt JIRA: DARV-2478 K3-G1/darv-config main cd57e10542a78a4cd3d46cb4be7ae8657268820c GitHub Enterprise Server +2 Â±3 - regressionstest/base /cronjob.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-19 11:13
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: cronjob Zeitzone angepasst JIRA: DARV-2478 K3-G1/darv-config main d20a27d5cca4a79fbb49e811743c479a4eaf4db6 GitHub Enterprise Server +1 Â±1 - regressionstest/base /cronjob.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-19 10:39
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: serviceaccountnamen hinzugefÃ¼gt JIRA: DARV-2478 K3-G1/darv-config main 15b81007d4e2dee46d89b4e45e21262c021afd4d GitHub Enterprise Server +1 Â±1 - regressionstest/base /cronjob.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-18 13:18
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: Annotations hinzugefÃ¼gt JIRA: DARV-2478 K3-G1/darv-config main d02372ced9a60ca851ea5b4369524d8a793259b1 GitHub Enterprise Server +6 - - regressionstest/base /cronjob.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-18 12:19
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: typo: filenamegeÃ¤ndert JIRA: DARV-2478 K3-G1/tp-rancher main 2bd137fc7a97a471593c3dc403c1f83a2e800996 GitHub Enterprise Server +30 HinzugefÃ¼gt subdomains/darv/test/darv /regressionstest.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-17 14:44
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: neustart vom cronjob wird verhindert JIRA: DARV-2478 K3-G1/darv-config main 1d47dc01992a0dc161fc5f58eaadad577fdd93f2 GitHub Enterprise Server - Â±1 - regressionstest/base /cronjob.yaml GitHub Enterprise Server
+
+------------------------------------------------------------
+
+Datum: 2025-11-17 13:39
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: Regressionstest Kustomization Konfiguration hinzugefÃ¼gt JIRA: DARV-2478 K3-G1/tp-rancher main 3b6a4d3d7a4b1b20c2c12720d426804b6bd5eda7 GitHub Enterprise Server +1 - - subdomains/darv/test/darv /kustomization.yaml GitHub Enterprise Server +30 HinzugefÃ¼gt subdomains/darv/test/darv /regresionstest.yaml GitHub Enterprise Server +31 - -
+
+------------------------------------------------------------
+
+Datum: 2025-11-17 12:37
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: ops: fÃ¼ge regressionstest Cronjob hinzu JIRA: DARV-2478 K3-G1/darv-config main 35bd59ab81fe2cdd6097254da80ee0216be2114c GitHub Enterprise Server +15 HinzugefÃ¼gt regressionstest/base /cronjob.yaml GitHub Enterprise Server +15 HinzugefÃ¼gt regressionstest/base /kustomization.yaml GitHub Enterprise Server +9 HinzugefÃ¼gt regressionstest/test /kustomization.yaml GitHub Enterprise Server +39 - -
+
+------------------------------------------------------------
+
+Datum: 2025-11-07 16:29
+TÃ¤tigkeit: Nijjar Sandip - extern Ã¤nderte den Status von DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests auf Im Test
+
+------------------------------------------------------------
+
+Datum: 2025-11-07 12:10
+TÃ¤tigkeit: Nijjar Sandip - extern Ã¤nderte Bearbeiter auf " Nijjar Sandip - extern " am DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+
+------------------------------------------------------------
+
+Datum: 2025-11-07 12:10
+TÃ¤tigkeit: Nijjar Sandip - extern Ã¤nderte den Status auf Geschlossen am DARV-2495 - Analyse & Umsetzung: Frontend wird nicht richtig angezeigt mit der LÃ¶sung "Erledigt"
+
+------------------------------------------------------------
+
+Datum: 2025-11-07 12:03
+TÃ¤tigkeit: Nijjar Sandip - extern hat Quarkus bearbeitet
+
+------------------------------------------------------------
+
+Datum: 2025-11-07 11:56
+TÃ¤tigkeit: Nijjar Sandip - extern aktualisierte Beschreibung fÃ¼r DARV-2499 - Skript zur Vereinfachung des lokalen Projekt-Setups erstellen
+Details: Story * Als: DuI/Test MÃ¶chte ich: ein Skript ausfÃ¼hren kÃ¶nnen, dass alle notwendigen Schritte fÃ¼r das lokale Aufsetzen des Projekts automatisiert, Damit: ich das Projekt schnell, zu verlÃ¤ssig und mit minimalem manuellen Aufwand lokal starten Mehr...
+
+------------------------------------------------------------
+
+Datum: 2025-11-07 11:54
+TÃ¤tigkeit: Nijjar Sandip - extern aktualisierte Beschreibung fÃ¼r DARV-2499 - Skript zur Vereinfachung des lokalen Projekt-Setups erstellen
+Details: Story * Als: DuI/Test MÃ¶chte ich: ein Skript ausfÃ¼hren kÃ¶nnen, dass alle notwendigen Schritte fÃ¼r das lokale Aufsetzen des Projekts automatisiert, Damit: ich das Projekt schnell, zu verlÃ¤ssig und mit minimalem manuellen Aufwand lokal starten Mehr...
+
+------------------------------------------------------------
+
+Datum: 2025-11-07 11:40
+TÃ¤tigkeit: Nijjar Sandip - extern aktualisierte Beschreibung fÃ¼r DARV-2499 - Skript zur Vereinfachung des lokalen Projekt-Setups erstellen
+Details: Story * Als: DuI/Test MÃ¶chte ich: ein Skript ausfÃ¼hren kÃ¶nnen, dass alle notwendigen Schritte fÃ¼r das lokale Aufsetzen des Projekts automatisiert, Damit: ich das Projekt schnell, zu verlÃ¤ssig und mit minimalem manuellen Aufwand lokal starten Mehr...
+
+------------------------------------------------------------
+
+Datum: 2025-11-07 11:26
+TÃ¤tigkeit: Nijjar Sandip - extern aktualisierte Beschreibung fÃ¼r DARV-2499 - Skript zur Vereinfachung des lokalen Projekt-Setups erstellen
+Details: Story * Als: DuI/Test MÃ¶chte ich: ein Skript ausfÃ¼hren kÃ¶nnen, dass alle notwendigen Schritte fÃ¼r das lokale Aufsetzen des Projekts automatisiert, Damit: ich das Projekt schnell, zu verlÃ¤ssig und mit minimalem manuellen Aufwand lokal starten Mehr...
+
+------------------------------------------------------------
+
+Datum: 2025-11-06 16:48
+TÃ¤tigkeit: Nijjar Sandip - extern kommentierte DARV-2495 - Analyse & Umsetzung: Frontend wird nicht richtig angezeigt
+Details: Unter der Seite wird es erreicht: https://leistung-vfz1.con.idst.ibaintern.de/darv-intranet-gui/dev/kunde/735D523731/veranlagungsjahre Die Step UI leitet auf die nachfolgenden Host: https://leistung.con.idst.ibaintern.de/darv-intranet-gui/dev/ Eine Cors Fehlermeldung tritt auf. Mehr...
+
+------------------------------------------------------------
+
+Datum: 2025-11-06 15:58
+TÃ¤tigkeit: Nijjar Sandip - extern kommentierte DARV-2495 - Analyse & Umsetzung: Frontend wird nicht richtig angezeigt
+
+------------------------------------------------------------
+
+Datum: 2025-11-06 15:58
+TÃ¤tigkeit: Nijjar Sandip - extern fÃ¼gte eine Datei zu DARV-2495 - Analyse & Umsetzung: Frontend wird nicht richtig angezeigt hinzu
+
+------------------------------------------------------------
+
+Datum: 2025-11-06 15:24
+TÃ¤tigkeit: Nijjar Sandip - extern kommentierte DARV-2459 - Analyse - Checkmarx: Dangerous_File_Size_Upload
+Details: Zeile: while ((inputLine = in.readLine()) != null) Checkmarx Fehlermeldung: The uploaded file readLine in darv-k8s\darv-batch\darv-worker\src\main\java\de\ba\darv\batch\worker\auth\KeyTimer.java at line 48 is stored in darv-k8s\darv-batch\darv-worker\src\main\java\de\ba\darv\batch\worker\auth\KeyTimer.java Mehr...
+
+------------------------------------------------------------
+
+Datum: 2025-11-06 15:19
+TÃ¤tigkeit: Nijjar Sandip - extern kommentierte DARV-2459 - Analyse - Checkmarx: Dangerous_File_Size_Upload
+
+------------------------------------------------------------
+
+Datum: 2025-11-06 14:57
+TÃ¤tigkeit: Nijjar Sandip - extern committed to DARV-2495 - Analyse & Umsetzung: Frontend wird nicht richtig angezeigt
+Details: deploy: Dev Umgebung auf den Development Branch bringen JIRA: DARV-2495 K3-G1/darv-config main a84b60a0224d8440514016c3520e21d333589fab GitHub Enterprise Server - Â±1 - batch-controller/dev /kustomization.yaml GitHub Enterprise Server - Â±1 - batch-kbesch-connector/dev /kustomization.yaml GitHub Enterprise Server - Â±1 - batch-scheduler/dev/vfz1 /kustomization.yaml GitHub Enterprise Server - Â±4 - 4 mehr... - Â±7 -
+
+------------------------------------------------------------
+
+Datum: 2025-11-06 09:03
+TÃ¤tigkeit: Nijjar Sandip - extern Ã¤nderte den Status auf Erledigt am DARV-2448 - JL - Parallelisierung von Batch-Jobs konfigurieren mit der LÃ¶sung "Erledigt"
+
+------------------------------------------------------------
+
+Datum: 2025-11-05 09:29
+TÃ¤tigkeit: Nijjar Sandip - extern Ã¤nderte den Status von DARV-2495 - Analyse & Umsetzung: Frontend wird nicht richtig angezeigt auf In Arbeit
+
+------------------------------------------------------------
+
+Datum: 2025-11-04 09:43
+TÃ¤tigkeit: Nijjar Sandip - extern kommentierte DARV-2495 - Analyse & Umsetzung: Frontend wird nicht richtig angezeigt
+
+------------------------------------------------------------
+
+Datum: 2025-11-03 11:50
+TÃ¤tigkeit: Nijjar Sandip - extern aktualisierte Beschreibung fÃ¼r DARV-2495 - Analyse & Umsetzung: Frontend wird nicht richtig angezeigt
+
+------------------------------------------------------------
+
+Datum: 2025-11-03 11:50
+TÃ¤tigkeit: Nijjar Sandip - extern aktualisierte Rang fÃ¼r DARV-2495 - Analyse & Umsetzung: Frontend wird nicht richtig angezeigt
+
+------------------------------------------------------------
+
+Datum: 2025-11-03 11:50
+TÃ¤tigkeit: Nijjar Sandip - extern Ã¤nderte Bearbeiter auf " Nijjar Sandip - extern " am DARV-2495 - Analyse & Umsetzung: Frontend wird nicht richtig angezeigt
+
+------------------------------------------------------------
+
+Datum: 2025-11-03 11:50
+TÃ¤tigkeit: Nijjar Sandip - extern aktualisierte Sprint fÃ¼r DARV-2495 - Analyse & Umsetzung: Frontend wird nicht richtig angezeigt
+
+------------------------------------------------------------
+
+Datum: 2025-11-03 10:53
+TÃ¤tigkeit: Nijjar Sandip - extern Ã¤nderte Stichwörter auf "ReadyforImplementation" am DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+
+------------------------------------------------------------
+
+Datum: 2025-11-03 10:24
+TÃ¤tigkeit: Nijjar Sandip - extern aktualisierte Rang fÃ¼r DARV-2495 - Analyse & Umsetzung: Frontend wird nicht richtig angezeigt
+
+------------------------------------------------------------
+
+Datum: 2025-11-03 10:24
+TÃ¤tigkeit: Nijjar Sandip - extern erstellte DARV-2495 - Analyse & Umsetzung: Frontend wird nicht richtig angezeigt
+
+------------------------------------------------------------
+
+Datum: 2025-10-30 16:04
+TÃ¤tigkeit: Nijjar Sandip - extern hat Bestellungen über das CSSP (Cloud Self Service Portal) bearbeitet
+
+------------------------------------------------------------
+
+Datum: 2025-10-29 15:55
+TÃ¤tigkeit: Nijjar Sandip - extern aktualisierte Beschreibung fÃ¼r DARV-2478 - Erstellung Dockerfile fÃ¼r Cucumbertests
+Details: Story: Als: DARV DuI / Tester MÃ¶chte ich: mÃ¶chte ich ein Dockerfile fÃ¼r die Cucumbertests haben Damit: die Cucumbertests lokal isoliert durchgefÃ¼hrt werden kÃ¶nnen. Details: Es soll ein Dockerfile erstellt werden, mit dem eine lokale Mehr...
+
+------------------------------------------------------------
+
+Datum: 2025-10-29 15:29
+TÃ¤tigkeit: Nijjar Sandip - extern Ã¤nderte den Status auf Erledigt am DARV-2408 - [K3] Leistungscluster - Setup Tracking der Service Aufrufzeiten in Grafana mit der LÃ¶sung "Erledigt"
+
+------------------------------------------------------------
+
