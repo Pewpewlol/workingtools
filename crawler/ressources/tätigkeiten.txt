@@ -1,0 +1,65 @@
+User Story erstellen/bearbeiten
+Kommunikation / Präsentation / Abstimmung
+Konzept
+vClients, Umstellung und Einrichtung
+Regeltermine, Vorbereitung
+Regeltermine, Teilnahme
+Regeltermine, Nachbereitung
+Daily, Vorbereitung
+Daily, Teilnahme
+Planning, Vorbereitung
+Planning, Teilnahme
+Planning, Nachbereitung
+Refinement, Vorbereitung
+Refinement, Teilnahme
+Refinement, Nachbereitung
+Product Review, Vorbereitung
+Product Review, Teilnahme
+Product Review, Präsentation
+Product Review, Nachbereitung
+Retrospektive, Vorbereitung
+Retrospektive, Teilnahme
+Retrospektive, Nachbereitung
+Workshop/Community, Vorbereitung
+Workshop/Community, Teilnahme
+Workshop/Community, Nachbereitung
+Workshop/Community, Arbeitsgruppe
+Onboarding
+Fachliche Absprache
+Bugs und Incidents, Bearbeitung und Analyse
+Analyse/Planung/Bewertung/Review
+Dokumentation (Erstellung, Pflege, Review)
+System aufsetzen / konfigurieren
+Betreuung Build- / Deployment- Pipelines
+Fehleranalyse
+Fehlerbehebung
+Programmieren (Code)
+Analyse (Code)
+Unit-Tests
+Review (Code)
+Dokumentation (Jira, CFL)
+Datenbanken, Management
+Bereitstellung von Infrastruktur
+Berechtigungen, Management
+Störungen, Beseitigung
+Dokumentation
+PRV-Wochenende, Wartungswochenende
+Produktivsetzung, Deployment im Regelbetrieb
+Anforderungen, Umsetzung
+ISMS, Pflege
+Audits Vorbereitung, Durchführung, Nachhalten
+Incidents, Bearbeitung und Koordination
+Problems, Bearbeitung und Koordination
+Changes, Bearbeitung und Koordination
+AFM-RfC, Bearbeitung und Koordination
+Allgemeine Koordination
+Bericht
+Releasekoordination
+Dokumentation
+Absprachen
+Durchführung Regressions-, Integrations-, Systemtests
+Durchführung Barrierefreiheitstests
+Testerstellung / Testwartung
+Wartung der Testinfrastruktur
+Testauswertung
+Dokumentation
